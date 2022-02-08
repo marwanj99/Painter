@@ -14,3 +14,19 @@ C:\Users\marwa\OneDrive\Pulpit\Work TSI\Coding\PainterSoftware\obj\Debug\net5.0\
 C:\Users\marwa\OneDrive\Pulpit\Work TSI\Coding\PainterSoftware\obj\Debug\net5.0\ref\PainterSoftware.dll
 C:\Users\marwa\OneDrive\Pulpit\Work TSI\Coding\PainterSoftware\obj\Debug\net5.0\PainterSoftware.pdb
 C:\Users\marwa\OneDrive\Pulpit\Work TSI\Coding\PainterSoftware\obj\Debug\net5.0\PainterSoftware.genruntimeconfig.cache
+C:\Users\marwa\OneDrive\Pulpit\WorkTSI\Coding\PainterSoftware\bin\Debug\net5.0\PainterSoftware.exe
+C:\Users\marwa\OneDrive\Pulpit\WorkTSI\Coding\PainterSoftware\bin\Debug\net5.0\PainterSoftware.deps.json
+C:\Users\marwa\OneDrive\Pulpit\WorkTSI\Coding\PainterSoftware\bin\Debug\net5.0\PainterSoftware.runtimeconfig.json
+C:\Users\marwa\OneDrive\Pulpit\WorkTSI\Coding\PainterSoftware\bin\Debug\net5.0\PainterSoftware.runtimeconfig.dev.json
+C:\Users\marwa\OneDrive\Pulpit\WorkTSI\Coding\PainterSoftware\bin\Debug\net5.0\PainterSoftware.dll
+C:\Users\marwa\OneDrive\Pulpit\WorkTSI\Coding\PainterSoftware\bin\Debug\net5.0\ref\PainterSoftware.dll
+C:\Users\marwa\OneDrive\Pulpit\WorkTSI\Coding\PainterSoftware\bin\Debug\net5.0\PainterSoftware.pdb
+C:\Users\marwa\OneDrive\Pulpit\WorkTSI\Coding\PainterSoftware\obj\Debug\net5.0\PainterSoftware.csproj.AssemblyReference.cache
+C:\Users\marwa\OneDrive\Pulpit\WorkTSI\Coding\PainterSoftware\obj\Debug\net5.0\PainterSoftware.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marwa\OneDrive\Pulpit\WorkTSI\Coding\PainterSoftware\obj\Debug\net5.0\PainterSoftware.AssemblyInfoInputs.cache
+C:\Users\marwa\OneDrive\Pulpit\WorkTSI\Coding\PainterSoftware\obj\Debug\net5.0\PainterSoftware.AssemblyInfo.cs
+C:\Users\marwa\OneDrive\Pulpit\WorkTSI\Coding\PainterSoftware\obj\Debug\net5.0\PainterSoftware.csproj.CoreCompileInputs.cache
+C:\Users\marwa\OneDrive\Pulpit\WorkTSI\Coding\PainterSoftware\obj\Debug\net5.0\PainterSoftware.dll
+C:\Users\marwa\OneDrive\Pulpit\WorkTSI\Coding\PainterSoftware\obj\Debug\net5.0\ref\PainterSoftware.dll
+C:\Users\marwa\OneDrive\Pulpit\WorkTSI\Coding\PainterSoftware\obj\Debug\net5.0\PainterSoftware.pdb
+C:\Users\marwa\OneDrive\Pulpit\WorkTSI\Coding\PainterSoftware\obj\Debug\net5.0\PainterSoftware.genruntimeconfig.cache

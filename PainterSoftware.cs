@@ -1,49 +1,86 @@
 using System;
-using System.ComponentModel;
-using System.Runtime.Versioning;
-using System.Security.Cryptography.X509Certificates;
+using System.Collections;
+using System.Diagnostics;
+using System.Globalization;
 using System.Threading;
-using Microsoft.Win32.SafeHandles;
 
 namespace PainterSoftware
 {
     public class Calculation
     {
-        double PricePerLitterOfGlossPaint = 10;
-        double PricePerLitterOfSemiGlossPaint = 7;
+        double PricePerLiterPaint;
         double TotalExpenses;
-        double CostOfPaintUsed = 0;
-        int LittersUsed = 0;
-        double HoursWorked = 0;
+        double CostOfPaintUsed;
+        double LitersUsed;
+        double HoursWorked;
         double ServiceCharge = 10;
-        double ChargeForHoursWorked = 0;
+        double ChargeForHoursWorked;
         string Typeofpaint;
         string extras = "";
         //string extraCost = "";
-        double ExtrasCosts = 0; 
+        double ExtrasCosts;
+        double Length;
+        double Height; 
+        double TotalArea;
+        double Area;
 
-        public void ChargeForPaint() //how much is customer charged for paint based on the type of paint and no. of litters used 
+
+        public void CalculateArea() //area of wall to figure how much paint to use 
         {
-            Console.WriteLine("How much paint was used: ");
-            LittersUsed = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Please specify the paint: ");
+            //int i = 1;
+
+            Console.WriteLine("how many areas are you painting?: ");
+            int x = Convert.ToInt32(Console.ReadLine());
+
+            double [] CollectionArea = new double[x]; 
+
+            for(int i = 1 ; i<=x; i++ )
+            {
+                Console.WriteLine("What is the length of wall " + i + " in meters square: ");
+                Length = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("What is the Height of wall " + i + " in meters square: ");
+                Height = Convert.ToDouble(Console.ReadLine());
+                Area = Length*Height;
+                CollectionArea [i] = Area;
+                TotalArea += CollectionArea[i];
+            }
+            LitersUsed = TotalArea*0.1;
+            Console.WriteLine("There will be " + LitersUsed + "L needed for this project.");
+            return;
+        }
+        public void ChargeForPaint() //how much is customer charged for paint based on the type of paint and no. of litters used 
+        {           
+
+            Console.WriteLine("We have a selection of Gloss, Semmi-Gloss or matte paints \n Please specify the type paint you want: ");
             Typeofpaint = Console.ReadLine();
 
-            if(Typeofpaint == "Gloss")
+            switch (Typeofpaint)
             {
-                CostOfPaintUsed = PricePerLitterOfGlossPaint*LittersUsed;
-                Console.WriteLine("the paint price is £" + CostOfPaintUsed + " for " + LittersUsed +"L of Gloss paint.");
+                case "Gloss":
+                    PricePerLiterPaint = 10;
+                    CostOfPaintUsed = PricePerLiterPaint*LitersUsed;
+                    Console.WriteLine("the paint price is £" + CostOfPaintUsed + " for " + LitersUsed +"L of Gloss paint.");
+                break;
+
+                case "Semmi-Gloss":
+                    PricePerLiterPaint = 7;
+                    CostOfPaintUsed = PricePerLiterPaint*LitersUsed;
+                    Console.WriteLine("the paint price is £" + CostOfPaintUsed + " for " + LitersUsed +"L of semi-Gloss paint.");
+                break;
+
+                case "Matte":
+                PricePerLiterPaint = 13;
+                    CostOfPaintUsed = PricePerLiterPaint*LitersUsed;
+                    Console.WriteLine("the paint price is £" + CostOfPaintUsed + " for " + LitersUsed +"L of Matte paint.");
+                break;
+
+                default:
+                    Console.Write("Please specify Gloss, Semi-Gloss or Matte paint \n");
+                break;
+
             }
-            else if (Typeofpaint == "Semmi-Gloss")
-            {
-                CostOfPaintUsed = PricePerLitterOfSemiGlossPaint*LittersUsed;
-                Console.WriteLine("the paint price is £" + CostOfPaintUsed + " for " + LittersUsed +"L of semi-Gloss paint.");
-            }
-            else
-            {
-                Console.Write("Please specify Gloss or Semi-Gloss paint");
-            }
-            return;
+
+
         }
 
         public void TotalChargeForHoursWorked() //charge for hours worked 
@@ -59,7 +96,7 @@ namespace PainterSoftware
         { 
             Console.WriteLine("Any Extra expenses? : ");
             extras = Console.ReadLine();
-
+        
             if(extras == "Yes") 
             {
                 Console.WriteLine("What is the amount of extra cost : ");
@@ -67,10 +104,14 @@ namespace PainterSoftware
                 TotalExpenses = ChargeForHoursWorked + CostOfPaintUsed + ExtrasCosts;
                 Console.WriteLine("the total fees is £" + TotalExpenses);
             }
-            else
+            else if (extras == "no")
             {
                 TotalExpenses = ChargeForHoursWorked + CostOfPaintUsed;
                 Console.WriteLine("the total fees is £" + TotalExpenses);
+            }
+            else
+            {
+                Console.WriteLine("please specify yes or no for extra expenses \n");
             }
             return;
         } 
@@ -83,6 +124,7 @@ namespace PainterSoftware
         static void Main(string[] args)
         {
             Calculation c = new Calculation();
+            c.CalculateArea();
             c.ChargeForPaint();
             c.TotalChargeForHoursWorked();
             c.TotalCost();
